@@ -1,0 +1,132 @@
+body{
+    display: flex;
+    justify-content: center;  
+}
+#start{
+    text-align: center;
+    line-height:700px;
+}
+.begin{
+    font-weight: 250;
+    color: blue;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 1px 1px 2px black;
+    font-size: 25px;
+}
+.hide,.next{display:none;}
+#div1,#Q1,#Q2,#Q3,#Q4,#Q5,#score{
+    width:50%;
+    background-color:white;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 10px;
+    margin: 10% 0;
+
+}
+body{
+    font-size:17px;;   
+}
+#but{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    
+}
+button:active {
+    transform: translateY(1px);
+  }
+#exit{color: blue;}
+#continue{background-color: blue;
+color: white;}
+
+button{
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 5px;
+    min-width: 86px ;
+    height: 30px;
+    font-size: 17px;
+}
+button:hover{
+    box-shadow: 1px 1px 2px black;
+}
+
+
+h2{
+    padding: 5px;
+    margin-left: 10px;
+}
+p{    display: inline-block;
+      font-weight: bold;
+      margin: 10px 25px;
+      font-size: 20px;
+}
+#hr1{ margin: 0;
+  border-bottom: 0px;
+}
+
+#time{
+    margin-left: 200px;
+    margin-right: 0;
+}
+.clock,.sec{margin:0 ;}
+
+ul > li{
+    margin-top:8px ;
+    background-color: #F3F1F5;
+    font-weight: bold;
+    border: 1px solid grey;
+    margin-left: -15px;
+    margin-right: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+    letter-spacing: 1.2px;
+}
+ul>li:hover{
+    background-color: #2D46B9;
+    color: white;
+    cursor: pointer;
+
+}
+.animation{
+    height:5px;
+    width: 0px;
+    margin: 0;
+    background-color: blue;
+    animation-name: anime;
+    animation-duration:15s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes anime {
+    0%{ width: 0;}
+    100%{width: 100%;}  
+}
+.next{
+    margin-left:350px;
+    background-color: #2D46B9;
+    color: white;
+}
+img{
+    display: block;
+    margin: 5px auto;
+    height: 200px;
+}
+#score{text-align: center;}
+h2{margin:0;}
+
+#finale{background-color: blue;
+color: white;
+}
+#finale2{
+    background-color: blue ;
+    color:white ;
+    padding: 5px;
+    margin:15px 10px;
+    font-size: 20px;
+    height: 50px;
+}
+
+
+
