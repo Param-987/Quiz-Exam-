@@ -1,3 +1,5 @@
+import question from "./Question";
+
 var x=0;
 var q=0;
 let a=0;
