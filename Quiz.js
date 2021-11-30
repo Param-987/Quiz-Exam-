@@ -6,7 +6,7 @@ let score= 0
 var q=0;
 let a=0;
 var eve;
-let selectedOptons = []
+let selectedOptions = []
 
 document.querySelector('#start').addEventListener('click',()=>{
     document.querySelector('#start').style.display = 'none'
@@ -27,36 +27,29 @@ function display(p){
      Options.forEach( element => {
          element.addEventListener('click',()=>{
              if(pia && x<15) return false ;
-             selectedOptons.push(element.getAttribute("id"))
-             if(element.getAttribute("id") == ans) { element.style.backgroundColor = "green";   score++;
-            }
-             else {
-                 element.style.backgroundColor = "red"
-                 document.querySelector(`#${ans}`).style.backgroundColor = "green"
-             }
+             if(x==15) return false;
+             selectedOptions.push(element.getAttribute("id"))
+             element.style.cssText="background-color:blue;color:white";
+             clearInterval(eve);
+             if(element.getAttribute("id") == ans)  score++; 
              document.getElementById("next").style.display="inline";
              pia = true;
 
          })
-         
         })
 }
 
 function clock(){
     if(x==15){
         document.getElementById("next").style.display="inline";
-
-        // document.querySelectorAll('.option').forEach(element=>{
-        //     // element.
-        //     if(ans == element.getAttribute("id")) element.style.backgroundColor = "green";
-        // })
+        selectedOptions.push(-1);
         clearInterval(eve); 
     } 
     else {
     x++;
     document.getElementsByClassName("clock")[q].innerText=x; }
 }
-// function 
+
 
 document.querySelector('#continue').addEventListener('click',()=>{
     document.getElementById("div1").classList.add("hide");
@@ -73,8 +66,10 @@ document.querySelector('#next').addEventListener('click',()=>{
     document.getElementsByClassName("clock")[q].innerText=0;
     eve=setInterval(clock,1000);
     x=0;
-    if(selectedOptons.length !=Question.length) display(selectedOptons.length);
+    if(selectedOptions.length !=Question.length) { display(selectedOptions.length); }
     else{
+        clearInterval(eve);
+        // console.log(selectedOptions);
         document.getElementById("spa").innerHTML = `${score} out of ${num}`;
         document.querySelector("#Q1").classList.add("hide");
         document.querySelector("#score").classList.remove("hide");
@@ -83,21 +78,15 @@ document.querySelector('#next').addEventListener('click',()=>{
 
 
 
-
-
-function Final(){
-    document.getElementById("spa").innerHTML=(5-a);
-    console.log(a);
-    document.getElementsByClassName("Ques")[4].classList.add("hide");
-    document.querySelector("#score").classList.remove("hide");
-}
-
 document.querySelector('#finale2').addEventListener('click',()=>{
+    selectedOptions.splice(0,num);
+    score = 0;
     document.querySelector("#score").classList.add("hide");
     document.querySelector('#start').removeAttribute("style");
 })
 
 document.querySelector('#exit').addEventListener('click',()=>{
+    
     document.querySelector('#div1').classList.add("hide")
     document.querySelector('#start').removeAttribute("style");
 })
