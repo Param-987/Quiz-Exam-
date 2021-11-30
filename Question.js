@@ -1,4 +1,4 @@
-const question = [{
+const Question = [{
     Ques:'Q1.What does HTML stands for ? ',
     Option1:'Hyper Text Preprocessor',
     Option2:'Hyper Text Markup Language',
@@ -23,17 +23,25 @@ const question = [{
     Ques:'Q4.What does SQL stands for ? ',
     Option1:'Stylish Question Language',
     Option2:'StyleSheet Query Language',
-    Option3:'Cascading Style Sheet',
-    Option4:'Computer Style Sheet',
+    Option3:'Structured Query Language',
+    Option4:'Style Questioning Language',
     ans:'c'
 },
 {
-    Ques:'Q4.What does XML stands for ? ',
+    Ques:'Q5.What does XML stands for ? ',
     Option1:'eXtra Multy-Program Language',
     Option2:'eXamine Multiple Language',
     Option3:'eXtensible Markup Language',
     Option4:'eXecutable Multiple Language',
     ans:'c'
 },
+{
+    Ques:'Q6.What does MERN stands for ? ',
+    Option1:'MongoDB Express React NodeJs',
+    Option2:'Mongoose Express React Node',
+    Option3:'Mongoose Express React NodeJs',
+    Option4:'MongoDB Express React Node',
+    ans:'d'
+},
 ]
-export default question;
+export default Question ;

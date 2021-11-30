@@ -9,7 +9,14 @@
     <title>Document</title>
 </head>
 <body style="background-color: #BFA2DB; font-family: 'Open Sans', sans-serif;">
-    <div id="start" class=""><button class="begin" onclick="jobstart()">Start Quiz</button></div>
+    
+    <div id="start" >
+        <button class="cssbuttons-io-button begin"> Get started
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+            </div>
+          </button>
+    </div>
     
     <div id="div1" class="hide">
         <h2>Some Rules of this Quiz</h2>
@@ -24,7 +31,7 @@
         <hr>
         <div id="but">
         <button id="exit">Exit</button>
-        <button id="continue" onclick="cont()">Continue</button>
+        <button id="continue">Continue</button>
     </div>
     </div>
     <div id="Q1" class="Ques hide">
@@ -34,99 +41,27 @@
         <p class="sec">s</p>
         <hr id="hr1">
         <!-- <div class="animation"></div> -->
-        <h2>Q1.What does HTML stands for ? </h2>
+        <h2 id="Question"></h2>
         <ul style="list-style-type: none; line-height:30px;">
-            <li class="first wa" onclick="wans(0,0)">Hyper Text Preprocessor</li>
-            <li class="second ans"  onclick="ans(0)">Hyper Text Markup Language</li>
-            <li class="third wa" onclick="wans(0,1)">Hyper Text Multiple Language</li>
-            <li class="fourth wa" onclick="wans(0,2)">Hyper Tool Markup Language</li>
+            <li id="a"class="option"></li>
+            <li id="b"class="option"></li>
+            <li id="c"class="option"></li>
+            <li id="d"class="option"></li>
         </ul>
         <hr>
-        <p>Question 1 of 5</p><button class="next" onclick='next(0)'>NEXT</button>
+        <p id="qno">Question 1 of 5</p><button id="next" >NEXT</button>
 
     </div>
-    <div id="Q2" class="Ques hide">
-        <p class="msg">Awesome Quiz Application</p>
-        <p id="time">TIME:</p>
-        <p class="clock">0</p>
-        <p class="sec">s</p>
-        <hr id="hr1">
-        <!-- <div class="animation"></div> -->
-        <h2> Q2. What does CSS stands for ? </h2>
-        <ul style="list-style-type: none; line-height:30px;">
-            <li class="first wa" onclick="wans(1,0)">Common Style Sheet</li>
-            <li class="second wa" onclick="wans(1,1)">Colorful Style Sheet</li>
-            <li class="third wa" onclick="wans(1,2)">Computer Style Sheet</li>
-            <li class="fourth ans"  onclick="ans(1)">Cascading Style Sheet</li>
-        </ul>
-        <hr>
-        <p>Question 2 of 5</p><button class="next" onclick="next(1)">NEXT</button>
-
-    </div>
-    <div id="Q3" class="Ques hide" >
-        <p class="msg">Awesome Quiz Application</p>
-        <p id="time">TIME: </p>
-        <p class="clock">0</p>
-        <p class="sec">s</p>
-        <hr id="hr1">
-        <!-- <div class="animation"></div> -->
-        <h2> Q3. What does PHP stands for ? </h2>
-        <ul style="list-style-type: none; line-height:30px;">
-            <li class="first ans"  onclick="ans(2)">Hypertext Preprocessor</li>
-            <li class="second wa" onclick="wans(2,0)">Hypertext Programming</li>
-            <li class="third wa" onclick="wans(2,1)">Hypertext Preprogrammng</li>
-            <li class="fourth wa" onclick="wans(2,2)">Hometext Preprocessor</li>
-        </ul>
-        <hr>
-        <p>Question 3 of 5</p><button class="next" onclick="next(2)">NEXT</button>
-
-    </div>
-    <div id="Q4" class="Ques hide">
-        <p class="msg">Awesome Quiz Application</p>
-        <p id="time">TIME: </p>
-        <p class="clock">0</p>
-        <p class="sec">s</p>
-        <hr id="hr1">
-        <!-- <div class="animation"></div> -->
-        <h2> Q4. What does SQL stands for ? </h2>
-        <ul style="list-style-type: none; line-height:30px;">
-            <li class="first wa" onclick="wans(3,0)">Stylish Question Language</li>
-            <li class="second wa" onclick="wans(3,1)">Stylesheet Query Language</li>
-            <li class="third wa" onclick="wans(3,2)">Statement Question Language</li>
-            <li class="fourth ans"  onclick="ans(3)">Structured Query Language</li>
-        </ul>
-        <hr>
-        <p>Question 4 of 5</p><button class="next" onclick="next(3)">NEXT</button>
-        
-
-    </div>
-    <div id="Q5" class="Ques hide" >
-        <p class="msg">Awesome Quiz Application</p>
-        <p id="time">TIME:</p>
-        <p class="clock">0</p>
-        <p class="sec">s</p>
-        <hr id="hr1">
-        <!-- <div class="animation"></div> -->
-        <h2>Q5. What does XML stands for ? </h2>
-        <ul style="list-style-type: none; line-height:30px;">
-            <li class="first ans" onclick="ans(4)">eXtensible Markup Language</li>
-            <li class="second wa" onclick="wans(4,0)">eXtra Multy-Program Language</li>
-            <li class="third wa" onclick="wans(4,1)">eXamine Multiple Language</li>
-            <li class="fourth wa" onclick="wans(4,2)">eXecutable Multiple Language</li>
-        </ul>
-        <hr>
-        <p>Question 5 of 5</p><button class="next" onclick="Final()">NEXT</button>
-
-    </div>
+   
 
      <div id="score" class="hide">
          <img src="pic.png" alt="Win">
          <h2>You have completed the quiz!</h2>
-         <h2>and congrats 🎉, you got <span id="spa"></span> out of 5</h2>
-         <button id="finale2" onclick="back()">Quit Quiz</button>
+         <h2>and congrats 🎉, you got <span id="spa"></span></h2>
+         <button id="finale2">Quit Quiz</button>
      </div>
 
 
-    <script src="Quiz.js"></script>
+    <script type="module" src="Quiz.js" ></script>
 </body>
 </html>
