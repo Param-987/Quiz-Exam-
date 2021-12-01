@@ -7,6 +7,7 @@ let a=0;
 var eve;
 let selectedOptions = []
 
+
 document.querySelector('#start').addEventListener('click',()=>{
     document.querySelector('#start').style.display = 'none'
     document.querySelector("#div1").classList.remove("hide");
@@ -32,7 +33,9 @@ function display(p){
              selectedOptions.push(element.getAttribute("id"))
              element.style.cssText="background-color:blue;color:white";
              clearInterval(eve);
-             if(element.getAttribute("id") == ans)  score++; 
+             if(element.getAttribute("id") == ans)  score+=4; 
+             else score--;
+             if(selectedOptions.length == num) document.getElementById("next").innerHTML ='Submit'
              document.getElementById("next").style.display="inline";
              pia = true;
 
@@ -43,8 +46,9 @@ function display(p){
 function clock(){
     if(x==15){
         document.querySelector('#anime').classList.remove("animation");
-        document.getElementById("next").style.display="inline";
         selectedOptions.push(-1);
+        if(selectedOptions.length == num) document.getElementById("next").innerHTML ='Submit'
+        document.getElementById("next").style.display="inline";
         clearInterval(eve); 
     } 
     else {
@@ -71,20 +75,15 @@ document.querySelector('#next').addEventListener('click',()=>{
     if(selectedOptions.length !=Question.length) { display(selectedOptions.length); }
     else{
         clearInterval(eve);
-        document.getElementById("spa").innerHTML = `${score} out of ${num}`;
         document.querySelector("#Q1").classList.add("hide");
-        document.querySelector("#score").classList.remove("hide");
+        review();
+
     }
 })
 
 
 
-document.querySelector('#finale2').addEventListener('click',()=>{
-    selectedOptions.splice(0,num);
-    score = 0;
-    document.querySelector("#score").classList.add("hide");
-    document.querySelector('#start').removeAttribute("style");
-})
+
 
 document.querySelector('#exit').addEventListener('click',()=>{
     
@@ -92,9 +91,7 @@ document.querySelector('#exit').addEventListener('click',()=>{
     document.querySelector('#start').removeAttribute("style");
 })
 
-document.querySelector('#review').addEventListener('click',()=>
-{
-    document.querySelector('#score').classList.add('hide');
+function review(){
     let str = `<h2 style="text-align:center">Awesome Quiz Application</h2>`;
 
     for(let x of Question){
@@ -113,11 +110,15 @@ document.querySelector('#review').addEventListener('click',()=>
         <br>
         `
     }
+    score < 0? score = 0 :null;
+    str+=`<div class="Quit"><h3>Marks Scored is ${score}</h3><button class="exit" onclick="gotobeg()">EXIT</button></div>`
     document.querySelector('.last').innerHTML = str;
-    console.log(str);
     markdown()
     document.querySelector('.last').classList.remove("hide");
-})
+    console.log(score);
+    selectedOptions = [];
+    score = 0;
+}
 
 function markdown(){
 

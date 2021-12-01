@@ -92,20 +92,9 @@ img{
 #score{text-align: center;}
 h2{margin:0;}
 
-#finale{background-color: blue;
-color: white;
-}
-#finale2{
-    background-color: blue ;
-    color:white ;
-    padding: 5px;
-    margin:15px 10px;
-    font-size: 20px;
-    height: 50px;
-}
 
 #start{
-    height:100vh;
+    height:80vh;
     display: flex;
     align-items: center;
 }
@@ -174,4 +163,10 @@ color: white;
        position: absolute;
        right:14%;
        color: white;
+   }
+
+   .Quit{
+       display: flex;
+       justify-content: space-around;
+       align-items: baseline;
    }

@@ -51,19 +51,21 @@
         <p id="qno">Question 1 of 5</p><button id="next" >NEXT</button>
 
     </div>
-   
-<!-- 
-     <div id="score" class="hide">
-         <img src="pic.png" alt="Win">
-         <h2>You have completed the quiz!</h2>
-         <h2>and congrats 🎉, you got <span id="spa"></span></h2>
-         <button id="finale2">Quit Quiz</button>
-         <button id="review">Review Performance</button>
-     </div> -->
+    <div >
      <div class="last" >
      </div>
+    </div>
 
+    <script>
+         function gotobeg(){
+    document.querySelector('.last').classList.add('hide');
+    document.querySelector('#start').removeAttribute("style");
+}
+    </script>
 
-    <script type="module" src="Quiz.js" ></script>
+    <script type="module" src="Quiz.js" >
+        
+   
+    </script>
 </body>
 </html>

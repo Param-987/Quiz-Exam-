@@ -6,7 +6,8 @@ const Question = [{
     Option4:'Hyper Tool Markup Language',
     ans:'b',
     desc:'HTML is a frontend Language helps in building the structure of Websites'
-},{
+}
+,{
     Ques:' Q2. What does CSS stands for ?',
     Option1:'Common Style Sheet',
     Option2:'Colorful Style Sheet',
